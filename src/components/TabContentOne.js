@@ -3,6 +3,7 @@ import Img from '../images/tab-1-pic.png';
 import styled from 'styled-components';
 import {Button} from './Button';
 import { generateMedia } from 'styled-media-query';
+import { Link } from 'react-router-dom';
 
 
 function TabContentOne() {
@@ -11,10 +12,16 @@ function TabContentOne() {
         <div className="container">
             <div className="tab-content">
                 <div>
-                <span className="title" style ={{marginBottow: '2rem'}}>If you decide Netflix isn't for you - no problem. No commitment. Cancel online anytime.
+                <span className="title" style ={{marginBottow: '2rem'}}>
+                    If you decide Netflix isn't for you - no problem. No commitment.
+                    Cancel online anytime.
                 </span>
                 <br />
-                <Button style={{marginTop: '2rem'}}>try it now</Button>
+                <Link to="/choose-plan" >
+                  <Button  style={{marginTop: '2rem'}}>
+                    try it now
+                  </Button>
+                </Link>
                 </div>
                 <img src={Img} />
             </div>

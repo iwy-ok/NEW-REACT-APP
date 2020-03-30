@@ -15,16 +15,20 @@ class Header extends Component {
     return(
      <HeaderContainer className="header-container">
         <div className="header-top">
-            <Logo src={logo} />
-            <NavLink className="signIn-btn"  to="/">Sign In</NavLink>
+            <Logo src={logo}  />
+            <NavLink  className="signIn-btn"  to="/login">Sign In</NavLink>
         </div>
         {/* Header Content */}
         <div className="header-content">
-            <Title>See What's next.</Title>
-            <SubTitle>WHATCH ANYWHERE CANCEL ANYTIME</SubTitle>
+            <Title>
+                Unlimited movies, TV shows, and more.
+            </Title>
+            <SubTitle>Watch Anywhere. Cancel anytime</SubTitle>
+            <Link to="/choose-plan">
                <Button className="main-offer-btn" primary>try it 30 days free
-                 <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
+                  <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
                </Button>
+            </Link>
         </div>
      </HeaderContainer>
     );
@@ -147,7 +151,7 @@ const HeaderContainer = styled.header`
 }
 `;
 
-//Main Title
+     //Main Title
 const Title = styled.h1`
 margin: 0 0 1.2rem;
 font-size: 5rem;

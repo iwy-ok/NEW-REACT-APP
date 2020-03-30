@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
-import { iosWorld } from 'react-icons-kit/ionicons/iosWorld';
-import { arrowSortedDown } from 'react-icons-kit/typicons/arrowSortedDown';
+import { iosWorld } from 'react-icons-kit/ionicons/iosWorld/';
+import { arrowSortedDown } from 'react-icons-kit/typicons/arrowSortedDown/';
 import { generateMedia } from 'styled-media-query';
 
  class Footer extends Component {
@@ -21,7 +21,9 @@ import { generateMedia } from 'styled-media-query';
     render() {
         return (
             <FooterContainer>
-                <span style={{ marginLeft: '15%', fontSize: '1.125rem' }}>Questions? <Link> Call 1-877-742-1335</Link></span>
+                <span style={{ marginLeft: '15%', fontSize: '1.125rem' }}>Questions? 
+                  <Link> Call 0800-724-0963</Link>
+                </span>
                 <div className="footer-columns">
                     <ul>
                         <li>
@@ -117,7 +119,7 @@ const customMedia = generateMedia({
 const FooterContainer = styled.footer`
 background: var(--main-deep-dark);
 padding-top: 10rem;
-padding-bottom: 3rem;
+padding-bottom: 5rem;
 color: #999;
 
 
@@ -126,7 +128,7 @@ color: #999;
     width: 70%;
     margin: 1rem auto 0;
     font-size: 0.9rem;
-    overflow: auto;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     ${customMedia.lessThan('lgDesktop')`
@@ -163,7 +165,7 @@ color: #999;
 
     //Toggle Language Content 
     .lang-toggle {
-        margin-left: 15%;
+        margin-left: 14.7%;
         position: absolute;
         margin-top: -2rem;
     }
@@ -172,11 +174,9 @@ color: #999;
         background: var(--main-deep-dark);
         width: 8.125rem;
         border: 1px solid #333;
-        text-align: center;
         &:hover {
             background: #0085ff;
              color: #fff;
         }
     }
-}
 `;
